@@ -1,8 +1,6 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/vue_02/'
-  }
+  base: '/vue_02/',
 } : {}
 
 module.exports = {
@@ -52,5 +50,7 @@ module.exports = {
   /*
   ** Make router relative to /vue_portfolio_01
   */
-  ...routerBase,
+  router: {
+    ...routerBase,
+  }
 }
