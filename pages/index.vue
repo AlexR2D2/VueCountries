@@ -1,15 +1,19 @@
 <template>
-  <section class="flex flex-column items-center justify-center mt5">
-  </section>
+  <div class="flex justify-center">
+    <countries></countries>
+  </div>
 </template>
 
 <script>
   import { mapGetters } from 'vuex'
-  import { detectClientLocation, detectClientCountry, getCountriesList } from '~/tools/data_provider_api'
+  import Countries from '~/components/countries.vue'
+  import { detectClientLocation, detectClientCountry } from '~/tools/data_provider_api'
 
   export default {
     layout: 'default',
-
+    components: {
+      'countries': Countries,
+    },
     mounted () {
       if (this.clientLocation) return
       detectClientLocation(this.$store)
@@ -22,9 +26,6 @@
         else 
           this.$store.commit('setClientCountry', null)
       },
-      clientCountry (val, old) {
-        getCountriesList(this.$store)
-      }
     },
     computed: {
       ...mapGetters(['clientLocation', 'clientCountry']),

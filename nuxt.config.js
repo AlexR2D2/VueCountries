@@ -44,9 +44,16 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+        config.module.rules.push({
+          test: /\.worker\.js$/,
+          use: { loader: 'worker-loader' }
+        })
       }
     }
   },
+  plugins: [
+    { src: '~/plugins/vue-lazyload', ssr: false }
+  ],
   /*
   ** Make router relative to /vue_portfolio_01
   */
