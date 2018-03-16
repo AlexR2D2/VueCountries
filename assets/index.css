@@ -5,6 +5,10 @@
   opacity: 0;
 }
 
+@media screen and (max-width: 60em) {
+ .show-l { position: fixed !important; position: absolute !important; clip: rect( 1px 1px 1px 1px ); /* IE6, IE7 */ clip: rect( 1px, 1px, 1px, 1px ); }
+}
+
 .button:focus {
   box-shadow: 
     0 0 0 3px #ffffff,
@@ -16,3 +20,42 @@
   background: #ffffff;
   color: #ffffff;
 }
+
+.exact-active-link {
+  color: greenyellow;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  /*Some sibling magic happens */
+}
+input[type="text"]:focus + .separator,
+input[type="password"]:focus + .separator {
+  -webkit-transform: scaleX(1) translateY(-2px);
+  transform: scaleX(1) translateY(-2px);
+  opacity: 1;
+}
+.separator {
+  height: 2px;
+  width: 100%;
+  background: #68B3FF;
+  display: block;
+  -webkit-transform: scaleX(0) translateY(-2px);
+          transform: scaleX(0) translateY(-2px);
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+/**
+* Form Reset - remove focus highlighting
+*/
+* :focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+

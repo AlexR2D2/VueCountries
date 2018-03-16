@@ -4,8 +4,12 @@
 
 <script>
 export default {
-  props: [
-  ],
+  props: {
+    options: {
+      type: Object,
+      default: () => { return {} }
+    }
+  },
   data: function () {
     return {
       map: null,
@@ -15,12 +19,10 @@ export default {
     }
   },
   mounted: function () {
-    
     const element = this.$refs.map
-    const options = {
-      zoom: 3,
-      center: new google.maps.LatLng(51.501527,-0.1921837)
-    }
+    const options =  Object.assign({
+      zoom: 3
+    }, this.options)
     this.map = new google.maps.Map(element, options);
     this.bounds = new google.maps.LatLngBounds();
     this.geocoder = new google.maps.Geocoder();

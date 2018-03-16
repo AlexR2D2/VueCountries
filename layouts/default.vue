@@ -1,17 +1,27 @@
 <template>
-  <div class="">
+  <div>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDquyfsGtMpIM8AN_0ru23GJJkK2hfFzzY"></script>
-    <nav class="flex items-center justify-center pv3 bg-blue mb4">
-      <nuxt-link to="/" class="white link ph3 f5 dim">Countries</nuxt-link>
-      <nuxt-link to="/location" class="white link ph3 f5 dim">Location</nuxt-link>
-      <nuxt-link to="/country" class="white link ph3 f5 dim">Country</nuxt-link>
-      <nuxt-link to="/about" class="white link ph3 f5 dim">About</nuxt-link>
-    </nav>
-    <nuxt/>
+    <!--<script src="anime.min.js"></script>-->
+    <nav-bar/>
+    <nuxt class="mt3 ph1"/>
+    <site-footer/>
   </div>
 </template>
 
 <script>
-  export default {
+import NavBar from '~/components/nav.vue'
+import SiteFooter from '~/components/footer.vue'
+export default {
+  head: {
+    meta: [
+      { name: 'viewport', content: 'initial-scale=1.0, width=device-width' }
+    ],
+    link: [
+    ]
+  },
+  components: {
+    'nav-bar': NavBar,
+    'site-footer': SiteFooter
   }
+}
 </script>

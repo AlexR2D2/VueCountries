@@ -8,6 +8,7 @@ function sortItems(items, sortField) {
   }
 }
 */
+
 function reselectCurrent(items, current) {
   if (items.length == 0) return null
   if (current) {
@@ -24,6 +25,7 @@ function reselectCurrent(items, current) {
 self.onmessage = function (e) {
   self.importScripts("sort_items.js");
 
+  const name = e.data.filters['name'].value
   const region = e.data.filters['region'].value
   const language = e.data.filters['language'].value
   const currency = e.data.filters['currency'].value
@@ -31,7 +33,10 @@ self.onmessage = function (e) {
   const neighbour = e.data.filters['border'].value
 
   const items = e.data.items.filter(item => {
-    return (region
+    return (name
+        ? item.name.toLowerCase().indexOf(name.name.toLowerCase()) !== -1
+        : true)
+      && (region
         ? item.region == region.name
         : true)
       && (language

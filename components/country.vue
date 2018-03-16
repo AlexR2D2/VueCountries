@@ -27,30 +27,30 @@
 </template>
 
 <script>
-  export default {
-    props: [
-      'country'
-    ],
-    computed: {
-      items () {
-        if (!this.country) return []
-        return [
-          { title: "Name", value: this.country.name },
-          { title: "Capital", value: this.country.capital },
-          { title: "Region", value: this.country.region },
-          { title: "Subregion", value: this.country.subregion },
-          { title: "Population", value: this.country.population },
-          { title: "Native name", value: this.country.nativeName },
-          { title: "Numeric code", value: this.country.numericCode },
-          { title: "Area", value: this.country.area },
-          { title: "Gini", value: this.country.gini },
-          { title: "Demonym", value: this.country.demonym },
-          //{ title: "", value: country. },
-          //{ title: "", value: country. },
-        ]
-      },
+export default {
+  props: [
+    'country'
+  ],
+  computed: {
+    items () {
+      if (!this.country) return []
+      return [
+        { title: "Name", value: this.country.name },
+        { title: "Capital", value: this.country.capital },
+        { title: "Region", value: this.country.region },
+        { title: "Subregion", value: this.country.subregion },
+        { title: "Population", value: this.country.population },
+        { title: "Native name", value: this.country.nativeName },
+        { title: "Numeric code", value: this.country.numericCode },
+        { title: "Area", value: this.country.area },
+        { title: "Gini", value: this.country.gini },
+        { title: "Demonym", value: this.country.demonym },
+        //{ title: "", value: country. },
+        //{ title: "", value: country. },
+      ]
     },
-  }
+  },
+}
 /*
 {
   "name": "Russian Federation",
@@ -108,3 +108,20 @@
 */
 </script>
 
+
+<style>
+.wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+.example {
+  height: 5rem;
+  width: 5rem;
+  background: #361F36;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+</style>

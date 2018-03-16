@@ -59,5 +59,6 @@ module.exports = {
   */
   router: {
     ...routerBase,
+    linkExactActiveClass: 'exact-active-link'
   }
 }

@@ -18,7 +18,7 @@
       <div class="w-50 flex flex-column f5 dark-gray one-line-text tl">
         <div class="pv2">&nbsp;{{country.capital}}</div>
         <div class="pv2">
-          <a href="#0" @click.prevent="regionClicked" class="no-underline blue pointer dim">&nbsp;{{country.region}}</a>
+          <a href="#0" @click.prevent="regionClicked" class="no-underline link blue pointer dim">&nbsp;{{country.region}}</a>
         </div>
         <div class="pv2">&nbsp;{{country.population}}</div>
         <div class="pv2">&nbsp;{{country.area}}</div>

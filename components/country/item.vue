@@ -14,7 +14,7 @@
           </a>
         </div>
         <div class="dtc f6 w-30">{{item.population}}</div>
-        <div class="dtc f6 w-30">{{item.area}}</div>
+        <div class="dtc f6 w-30 pl1">{{item.area}}</div>
       </div>
     </div>
   </div>
