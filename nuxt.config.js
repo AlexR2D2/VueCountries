@@ -1,6 +1,6 @@
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  base: '/vue_02/',
+  base: '/VueCountries/',
 } : {}
 
 module.exports = {
@@ -8,7 +8,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'portfolio_02',
+    title: 'VueCountries',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -44,6 +44,8 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
+      }
+      if (isClient) {
         config.module.rules.push({
           test: /\.worker\.js$/,
           use: { loader: 'worker-loader' }
