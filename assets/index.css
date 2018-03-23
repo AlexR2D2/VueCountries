@@ -30,7 +30,6 @@ input[type="password"] {
   width: 100%;
   border: none;
   border-bottom: 1px solid lightgray;
-  /*Some sibling magic happens */
 }
 input[type="text"]:focus + .separator,
 input[type="password"]:focus + .separator {
