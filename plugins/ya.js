@@ -16,7 +16,8 @@ export default ({ app }) => {
                 id:48244673,
                 clickmap:true,
                 trackLinks:true,
-                accurateTrackBounce:true
+                accurateTrackBounce:true,
+                webvisor:true
             });
         } catch(e) { }
     });
@@ -31,7 +32,7 @@ export default ({ app }) => {
     if (w.opera == "[object Opera]") {
         d.addEventListener("DOMContentLoaded", f, false);
     } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
+  })(document, window, "yandex_metrika_callbacks");
 
   // Yandex.Metrika counter
 }
