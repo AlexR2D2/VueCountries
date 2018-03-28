@@ -54,7 +54,8 @@ module.exports = {
     }
   },
   plugins: [
-    { src: '~/plugins/vue-lazyload', ssr: false }
+    { src: '~/plugins/vue-lazyload', ssr: false },
+    { src: '~/plugins/ya.js', ssr: false }
   ],
   /*
   ** Make router relative to /vue_portfolio_01
