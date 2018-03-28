@@ -54,8 +54,7 @@ module.exports = {
     }
   },
   plugins: [
-    { src: '~/plugins/vue-lazyload', ssr: false },
-    { src: '~/plugins/ya.js', ssr: false }
+    { src: '~/plugins/vue-lazyload', ssr: false }
   ],
   /*
   ** Make router relative to /vue_portfolio_01
@@ -63,5 +62,17 @@ module.exports = {
   router: {
     ...routerBase,
     linkExactActiveClass: 'exact-active-link'
-  }
+  },
+  modules: [
+    [
+      '@nuxtjs/yandex-metrika',
+      {
+        id:48244673,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+      }
+    ],
+  ]
 }

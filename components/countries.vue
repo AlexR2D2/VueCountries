@@ -186,7 +186,6 @@
       countryClicked (item) {
         if (!item) return
         if (this.current && this.current.name == item.name) return
-        if(!this.$refs.map) return
         this.$refs.map.setCurrentCountry(item.name)
         this.current = item
       },
