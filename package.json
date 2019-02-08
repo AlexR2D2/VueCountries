@@ -17,26 +17,27 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
-    "@nuxtjs/yandex-metrika": "^0.1.0",
-    "ajv": "^6.2.1",
-    "animejs": "^2.2.0",
-    "axios": "^0.17.1",
+    "@nuxtjs/yandex-metrika": "^0.1.1",
+    "ajv": "^6.8.1",
+    "animejs": "^3.0.1",
+    "axios": "^0.18.0",
+    "eventsource-polyfill": "^0.9.6",
     "fs": "0.0.1-security",
-    "keen-ui": "^1.0.1",
+    "keen-ui": "^1.1.1",
     "net": "^1.0.2",
-    "nuxt": "^1.4.0",
-    "promise-polyfill": "7.1.0",
+    "nuxt": "^2.4.3",
+    "promise-polyfill": "^8.1.0",
     "tls": "0.0.1",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.2",
-    "eslint": "^4.18.2",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.3.0",
-    "tachyons": "^4.9.1",
-    "vue-lazyload": "^1.2.2",
-    "worker-loader": "^1.1.1"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.1.2",
+    "eslint-plugin-vue": "^5.1.0",
+    "tachyons": "^4.11.1",
+    "vue-lazyload": "^1.2.6",
+    "worker-loader": "^2.0.0"
   }
 }

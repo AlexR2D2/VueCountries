@@ -16,14 +16,14 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
   },
   /*
   ** Customize the CSS
   */
   css: [
     'tachyons/css/tachyons.min.css',
-    '~assets/index.css',
+    '~/assets/index.css',
   ],
   /*
   ** Customize the progress bar color
