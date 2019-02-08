@@ -1,6 +1,8 @@
-# portfolio_02
+# VueCountries
 
-> Regions Info
+> Countries browser Nuxt.js project
+
+Online [Demo](https://alexr2d2.github.io/VueCountries/)
 
 ## Build Setup
 
